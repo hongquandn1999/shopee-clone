@@ -1,15 +1,9 @@
-import { useRoutes } from 'react-router-dom'
-import MainPage from './pages/MainPage'
+import useRouteElement from './useRouteElement'
 
 function App() {
-  let routerElement = useRoutes([
-    {
-      path: '/',
-      element: <MainPage />
-    }
-  ])
+  const routeElement = useRouteElement()
 
-  return routerElement
+  return <>{routeElement}</>
 }
 
 export default App

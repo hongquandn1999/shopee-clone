@@ -1,5 +1,17 @@
 import React from 'react'
+import Footer from 'src/components/Footer'
+import Header from 'src/components/Header'
 
-export default function MainPage() {
-  return <div>Hong Quan</div>
+interface MainPageProps {
+  children: React.ReactNode
+}
+
+export default function MainPage({ children }: MainPageProps) {
+  return (
+    <>
+      <Header />
+      {children}
+      <Footer />
+    </>
+  )
 }
